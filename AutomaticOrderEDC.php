@@ -13,6 +13,7 @@ add_action('woocommerce_thankyou', 'edc_order', 10, 1);
 function edc_order( $order_id ) {
     if ( ! $order_id )
         return;
+        
 
     // Allow code execution only once
     if( ! get_post_meta( $order_id, '_thankyou_action_done', true ) ) {
